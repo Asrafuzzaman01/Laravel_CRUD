@@ -32,7 +32,7 @@
             <td>{{$data->Email}}</td>
             <td>
                 <a href="{{url('/editedata/'. $data->id)}}" class="btn btn-success">Edite</a>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a href="{{url('/deletedata/'. $data->id)}}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
             </td>
           </tr>
           @endforeach

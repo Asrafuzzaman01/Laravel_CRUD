@@ -14,4 +14,4 @@ Route::get('/', [crudcontroller::class , 'showdata']);
 Route::get('/add_data', [crudcontroller::class , 'add_data']);
 Route::post('/storeData', [crudcontroller::class , 'storeData']);
 Route::get('/editedata/{id}', [crudcontroller::class , 'editedata']);
-// Route::get('/deletedata/{id}', [crudcontroller::class , 'deletedata']);
+Route::get('/deletedata/{id}', [crudcontroller::class , 'deletedata']);
