@@ -45,5 +45,26 @@ class crudcontroller extends Controller
 
 
     }
+    public function editedata($id = null)
+    {
+        $editedata = Crud::find($id);
+
+        return view('editedata', compact('editedata'));
+
+
+    }
+// public function deletedata($id = null)
+// {
+//     $deletedata = crud::find($id);
+//     $deletedata->delete();
+//     Session::flash('msg', "data added successfuly");
+
+//     return redirect('/');
+
+
+
+// }
+
+
 
 }

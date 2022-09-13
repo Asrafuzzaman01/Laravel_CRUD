@@ -20,6 +20,7 @@
             <th scope="col">Name</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,10 @@
             <td>{{$data->Name}}</td>
             <td>{{$data->Phone}}</td>
             <td>{{$data->Email}}</td>
+            <td>
+                <a href="{{url('/editedata/'. $data->id)}}" class="btn btn-success">Edite</a>
+                <a href="" class="btn btn-danger">Delete</a>
+            </td>
           </tr>
           @endforeach
 
