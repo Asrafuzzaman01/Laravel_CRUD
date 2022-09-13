@@ -23,30 +23,18 @@
           </tr>
         </thead>
         <tbody>
+            @foreach ($showdata as $key=>$data )
           <tr>
-            <th scope="row">1</th>
-            <td>korim</td>
-            <td>5678</td>
-            <td>@mdo</td>
+            <td>{{$key+1}}</td>
+            <td>{{$data->Name}}</td>
+            <td>{{$data->Phone}}</td>
+            <td>{{$data->Email}}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>6897908</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>rohim</td>
-            <td>687698-0</td>
-            <td>@twitter</td>
-          </tr>
+          @endforeach
+
         </tbody>
       </table>
-
-
-
-
+      {{$showdata->links()}}
 
 </div>
 

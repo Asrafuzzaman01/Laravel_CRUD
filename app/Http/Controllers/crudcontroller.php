@@ -10,7 +10,9 @@ class crudcontroller extends Controller
 {
     public function showdata()
     {
-        return view('showdata');
+        // $showdata = Crud::all();
+        $showdata = Crud::simplePaginate(6);
+        return view('showdata', compact('showdata'));
 
     }
     public function add_data()
@@ -38,7 +40,7 @@ class crudcontroller extends Controller
 
 
 
-        return redirect()->back();
+        return redirect('/');
 
 
 
